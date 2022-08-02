@@ -6,14 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button Function</title>
     <script>
+        // function myfn(){
+        //     let text=document.getElementById("input").value;
+        //     alert(text);
+        // }
         function myfn(){
             let text=document.getElementById("input").value;
-            alert(text);
+            if(text==null || text=="" || text==" "){
+                alert("Did not write anything!");
+            }
+            else{
+                document.getElementById("p1").innerHTML=text;
+            }
         }
     </script>
 </head>
 <body>
     <input type="text" placeholder="Enter Text" name="input" id="input"/>
     <button onclick=myfn()>click</button>
+    <p id="p1"></p>
 </body>
 </html>
