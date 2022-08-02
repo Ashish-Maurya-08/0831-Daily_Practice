@@ -6,23 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button Function</title>
     <script>
+
+        //   FUNCTION 1
+
+
         // function myfn(){
         //     let text=document.getElementById("input").value;
         //     alert(text);
         // }
+
+        //   FUNCTION 2
+
+
+        // function myfn(){
+        //     let text=document.getElementById("input").value;
+        //     if(text==null || text=="" || text==" "){
+        //         alert("Did not write anything!");
+        //     }
+        //     else{
+        //         document.getElementById("p1").innerHTML=text;
+        //     }
+        // }
+
+        //    FUNCTION 3
+
+
+        // function myfn(){
+        //     let text=document.getElementById("input").value;
+        //     if(text==null || text=="" || text==" "){
+        //         document.getElementById("p1").innerHTML="<span style='color:red'>Did not write anything!!</span>"
+        //     }
+        //     else{
+        //         document.getElementById("p1").innerHTML=text;
+        //     }
+        // }
+
+        //    FUNCTION 4
+
         function myfn(){
-            let text=document.getElementById("input").value;
-            if(text==null || text=="" || text==" "){
-                alert("Did not write anything!");
+            let num1=document.getElementById("input1").value;
+            let num2=document.getElementById("input2").value;
+            num1=Number(num1);
+            num2=Number(num2);
+            if(!isNaN(num1) && !isNaN(num2)){
+                document.getElementById("p1").innerHTML=num1+num2;
             }
             else{
-                document.getElementById("p1").innerHTML=text;
+                document.getElementById("p1").innerHTML="<span style='color:red'>Entered Value is not a number!!</span>"
             }
         }
     </script>
 </head>
 <body>
-    <input type="text" placeholder="Enter Text" name="input" id="input"/>
+    <!-- <input type="text" placeholder="Enter Text" name="input" id="input"/> -->
+    <input type="text" placeholder="Enter Number" id="input1">
+    <input type="text" placeholder="Enter Number" id="input2">
     <button onclick=myfn()>click</button>
     <p id="p1"></p>
 </body>
