@@ -10,11 +10,16 @@ function submit(){
         isEven="Odd";
     }
 
+
     for(let i=2;i<num/2;i++){
         if(num%i==0){
             isPrime="Not a Prime";
             break;
         }
+    }
+
+    if(num==0 || num==1){
+        isPrime="neither Prime nor Composite";
     }
 
     // document.getElementById("even_odd").innerHTML="Number is "+isEven;
